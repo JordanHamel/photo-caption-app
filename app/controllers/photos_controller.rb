@@ -1,13 +1,14 @@
 class PhotosController < ApplicationController
+	before_filter :authenticate_user!
 
 	def new
 		@photo = Photo.new
 	end
 
 	def create
-		file = params[:user].delete(:file).read
+		file = params[:photo].delete(:file).read
 
-		@photo = Photo.new(params[:user])
+		@photo = Photo.new(params[:photo])
 		@photo.file = file
 
 		if @photo.save
@@ -20,7 +21,12 @@ class PhotosController < ApplicationController
 	end
 
 	def show
-		@photo = Photo.find(params[:photo])
+		@photo = Photo.find(params[:id])
+	end
+
+	def show_file
+		file = Photo.find(params[:id])
+		send_data(file.file, type: 'image/jpg', disposition: 'inline')
 	end
 
 	def index

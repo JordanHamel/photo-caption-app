@@ -1,0 +1,13 @@
+<div class="navbar">
+	<ul class="navbar-buttons">
+		<% if current_user.nil? %>
+			<li><%= link_to "Sign In", new_user_session_path %></li>
+			<li><%= link_to "Sign Up", new_user_registration_path %></li>
+		<% else %>
+			<li><%= link_to "Profile", user_path(current_user) %></li>
+			<li><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></li>
+			<li><%= link_to "Upload a Picture", new_photo_path %></li>
+			<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+		<% end %>
+	</ul>
+</div>

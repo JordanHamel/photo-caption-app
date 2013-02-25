@@ -1,8 +1,14 @@
 CaptionApp::Application.routes.draw do
 
-  root :to => 'users#show'
+  devise_for :users
 
-  resources :users
-  resources :photos
-  resource :session, only: [:new, :create, :destroy]
+  root :to => 'static_pages#home'
+
+ 	resources :users, only: [:show]
+  resources :photos do
+  	member do
+  		get :show_file
+  	end
+  end
+
 end
