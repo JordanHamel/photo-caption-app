@@ -4,12 +4,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-
-    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-    <%= f.input :password_confirmation, :required => false %>
-    Profile picture <%= f.file_field :profile_pic %>
-    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+    <%= f.input :name, required: false %>
+    <%= f.input :email %>
+    <%= f.input :profile_pic, as: :file %>
   </div>
 
   <div class="form-actions">

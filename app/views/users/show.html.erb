@@ -1,1 +1,11 @@
 <h1>Welcome to your profile, <%= current_user.name %>!</h1>
+
+<%= image_tag show_profile_pic_user_url(current_user.id) %>
+
+<%#= image_tag show_user_photos_user_url(@user.id)%>
+
+<% unless @photos.empty? %>
+  <%= render :partial => 'photos/file', collection: @photos %>
+<% end %>
+
+<%#= @photos.count %>
