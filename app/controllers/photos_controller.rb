@@ -22,6 +22,7 @@ class PhotosController < ApplicationController
 
 	def show
 		@photo = Photo.find(params[:id])
+		@captions = ["caption1", "caption2", "caption3", "caption4", "caption5"]
 	end
 
 	def show_file
@@ -36,6 +37,15 @@ class PhotosController < ApplicationController
 	end
 
 	def update
+		photo = Photo.find(params[:id])
+		photo.caption = params[:caption]
+
+		if photo.save
+			render nothing: true
+		else
+			flash[:error] = "That didn't save :( Try clicking the button again!"
+			render 'new'
+		end
 	end
 
 end

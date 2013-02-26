@@ -1,17 +1,44 @@
 <h1>Add a Caption!</h1>
 
-<%= image_tag show_file_photo_url(@photo.id)%>
-
-<!-- haven't tested this yet, but would like to turn it into js anyway
-			(add caption w/out page reload) -->
-<div id="photo-caption-form">
-	<%#= simple_form_for(@photo) do |f| %>
-
-	<%#= f.input :caption %>
-	<%#= f.submit 'Add Caption' %>
-
-	<%# end %>
+<div id="photo">
+	<%= image_tag show_file_photo_url(@photo.id)%>
+	<div id="photo-caption">
+	</div>
 </div>
+
+<p id="random-caption-button" data-caption="<%= @captions.to_json %>" data-photo-id="<%= @photo.id %>">Caption this photo!</p>
+
+
+<script type="text/javascript">
+
+ 	$(function() {
+
+ 		$('#random-caption-button').click(function() {
+ 			var captions = $(this).data('caption');
+ 			var photo_id = $(this).attr('data-photo-id');
+ 			var rand_num = Math.floor(Math.random() * captions.length);
+ 			var rand_caption = captions[rand_num]
+
+ 			$.post(
+ 				'/photos/' + photo_id,
+ 				{ id: photo_id, caption: rand_caption, "_method":"put" },
+ 				function() {
+ 					$('#photo-caption').empty();
+		 			$('#photo-caption').append(rand_caption)
+ 				}
+ 			);
+ 		});
+ 	});
+
+</script>
+
+<!-- $.post(
+  '/session_items/' + session_item_id,
+  {"_method":"delete"},
+  function() {
+    $(that).parent().remove();
+  }
+); -->
 
 
 <!-- steps:
@@ -31,12 +58,3 @@
 			5. 'preview' add click listener to button
 				- adds caption to html on page
 				-->
-
-<!-- not using this yet
-<script type="text/javascript">
-
- 	$(function() {
-
- 	})
-
-</script> -->
