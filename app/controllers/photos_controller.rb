@@ -36,6 +36,11 @@ class PhotosController < ApplicationController
 	def edit
 	end
 
+        # REV: Will there be multiple captions (looks like maybe yes
+        # from the show action). Then you should have a captions
+        # resource, and the captions should be created there, not
+        # here. If this update just creates new captions, you should
+        # instead have a CaptionsController#create action.
 	def update
 		photo = Photo.find(params[:id])
 		photo.caption = params[:caption]
