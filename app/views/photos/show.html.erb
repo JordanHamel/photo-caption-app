@@ -19,6 +19,15 @@
  			var rand_num = Math.floor(Math.random() * captions.length);
  			var rand_caption = captions[rand_num]
 
+        // REV: wait, are you posting the caption you read off
+        // data-caption, data-photo-id? Aren't these the values the
+        // server sends down to you? I assume your next step is to
+        // actually have a little form, right? You'll be on your way
+        // then.
+
+        // REV: this is about at the point where this code should be
+        // moved into application.js
+
  			$.post(
  				'/photos/' + photo_id,
  				{ id: photo_id, caption: rand_caption, "_method":"put" },
