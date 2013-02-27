@@ -43,11 +43,22 @@
 .navbar-buttons a:hover {
 	text-decoration: none;
 	font-size: 18px;
-	color: #FFFFFF;
-	background-color: #dc9c32;
+	color: #232B2B;
+	background-color: #e36754;
 	padding: 10px;
 	margin: 0px 5px 0px 5px;
 	border-radius: 5px;
+}
+
+.navbar-buttons a:active {
+	text-decoration: none;
+	font-size: 18px;
+	color: #232B2B;
+	background-color: #e36754;
+	padding: 10px;
+	margin: 0px 5px 0px 5px;
+	border-radius: 5px;
+	box-shadow: inset 0px 2px 2px #DC3D24;
 }
 
 .navbar-buttons li {
@@ -68,19 +79,6 @@ h1 {
 }
 
 /*PROFILE*/
-
-/*#profile-pic {
-	max-width: 200px;
-	max-height: 200px;
-	margin: auto;
-}
-
-#profile-pic img {
-	border: 3px solid black;
-	border-radius: 15px;
-	max-width: 200px;
-	max-height: 200px;
-}*/
 
 .captioned-photo {
 	position: relative;
@@ -147,19 +145,47 @@ hr {
 }
 
 .caption-share-buttons {
-	width: 250px;
+	width:350px;
 	margin: auto;
 }
 
+.share-button {
+	position: relative;
+	cursor: hand;
+	cursor: pointer;
+	width: 150px;
+	height: 60px;
+	border-radius: 5px;
+	background-color: #DC3D24;
+	float: right;
+}
+
+.share-button a {
+	top: 30%;
+	left: 30%;
+	position: absolute;
+	text-decoration: none;
+	font-size: 18px;
+	color: #232B2B;
+}
+
 .random-caption-button {
+	cursor: hand;
+	cursor: pointer;
 	font-family: 'Happy Monkey';
 	font-size: 18px;
 	border-radius: 5px;
 	width: 150px;
 	height: 60px;
-	background-color: blue;
-	color: white;
+	background-color: #DC3D24;
+	color: #232B2B;
 	border: 0px;
+}
+
+.photo-caption {
+	color: #232B2B;
+	font-size: 30px;
+	color: white;
 }
 
 

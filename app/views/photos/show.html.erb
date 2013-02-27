@@ -10,8 +10,9 @@
 
 	<div class="caption-share-buttons">
 		<button class="random-caption-button" data-caption="<%= @captions.to_json %>" data-photo-id="<%= @photo.id %>">Caption this photo!</button>
-
-		<%= link_to "Share!", new_share_email_photo_url(@photo.id) %>
+			<div class="share-button">
+				<%= link_to "Share!", new_share_email_photo_url(@photo.id) %>
+			</div>
 	</div>
 
 		<script type="text/javascript">
