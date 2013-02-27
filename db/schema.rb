@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225193811) do
+ActiveRecord::Schema.define(:version => 20130227194918) do
 
   create_table "photos", :force => true do |t|
     t.binary   "file"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(:version => 20130225193811) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.binary   "profile_pic"
     t.string   "name"
   end
 

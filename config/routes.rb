@@ -6,7 +6,6 @@ CaptionApp::Application.routes.draw do
 
  	resources :users do
  		member do
- 			get :show_profile_pic
  			get :show_user_photos
  		end
  	end

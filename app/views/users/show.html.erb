@@ -1,9 +1,5 @@
 <div id="profile-header">
   <h1><%= @user.name %>'s photos!</h1>
-
-<!-- 	<div id="profile-pic">
-		<%= image_tag show_profile_pic_user_url(current_user.id) %>
-	</div> -->
 </div>
 
 <hr>
@@ -20,6 +16,10 @@
 			var photo_id = $(this).data('photo-id');
       window.location = '/photos/' + photo_id;
 		});
+
+    $('.captioned-photo').mouseover(function() {
+      console.log("mouse over");
+    });
   });
 
 </script>
