@@ -7,6 +7,10 @@ class UsersController < ApplicationController
 	end
 
 	def show_profile_pic
+          # REV: very poor naming; `profile_pic` stores a user; prefer
+          # the name `user`. Then you'll have:
+          # `send_data(user.profile_pic...)`. Whenever you write
+          # `x.x`, feel bad inside.
 		profile_pic = User.find(params[:id])
 		send_data(profile_pic.profile_pic, type: 'image/jpg', disposition: 'inline')
 	end
