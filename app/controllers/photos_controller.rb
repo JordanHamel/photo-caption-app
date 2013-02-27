@@ -39,12 +39,8 @@ class PhotosController < ApplicationController
         # REV: Will there be multiple captions (looks like maybe yes
         # from the show action). Then you should have a captions
         # resource, and the captions should be created there, not
-        # here.
-
-        # REV: this looks like you process a custom form for photo
-        # update. I think you still want to use
-        # `simple_form_for(@photo)`, and just update the submitted
-        # attributes. Talk to me if that doesn't make sense.
+        # here. If this update just creates new captions, you should
+        # instead have a CaptionsController#create action.
 	def update
 		photo = Photo.find(params[:id])
 		photo.caption = params[:caption]
