@@ -1,60 +1,42 @@
-<h1>Add a Caption!</h1>
+<% if @photo.user_id == current_user.id %>
 
-<div id="photo">
-	<%= image_tag show_file_photo_url(@photo.id)%>
-	<div id="photo-caption">
+	<h1>Add a caption, then share!</h1>
+
+	<div class="photo-to-edit">
+		<%= image_tag show_file_photo_url(@photo.id)%>
+		<div class="photo-caption">
+		</div>
 	</div>
-</div>
 
-<p id="random-caption-button" data-caption="<%= @captions.to_json %>" data-photo-id="<%= @photo.id %>">Caption this photo!</p>
+	<div class="caption-share-buttons">
+		<button class="random-caption-button" data-caption="<%= @captions.to_json %>" data-photo-id="<%= @photo.id %>">Caption this photo!</button>
 
+		<%= link_to "Share!", new_share_email_photo_url(@photo.id) %>
+	</div>
 
-<script type="text/javascript">
+		<script type="text/javascript">
 
- 	$(function() {
+	 	$(function() {
 
- 		$('#random-caption-button').click(function() {
- 			var captions = $(this).data('caption');
- 			var photo_id = $(this).attr('data-photo-id');
- 			var rand_num = Math.floor(Math.random() * captions.length);
- 			var rand_caption = captions[rand_num]
+	 		$('.random-caption-button').click(function() {
+	 			var captions = $(this).data('caption');
+	 			var photo_id = $(this).attr('data-photo-id');
+	 			var rand_num = Math.floor(Math.random() * captions.length);
+	 			var rand_caption = captions[rand_num]
 
- 			$.post(
- 				'/photos/' + photo_id,
- 				{ id: photo_id, caption: rand_caption, "_method":"put" },
- 				function() {
- 					$('#photo-caption').empty();
-		 			$('#photo-caption').append(rand_caption)
- 				}
- 			);
- 		});
- 	});
+	 			$.post(
+	 				'/photos/' + photo_id,
+	 				{ id: photo_id, caption: rand_caption, "_method":"put" },
+	 				function() {
+	 					$('.photo-caption').empty();
+			 			$('.photo-caption').append(rand_caption)
+	 				}
+	 			);
+	 		});
+	 	});
 
-</script>
+	</script>
 
-<!-- $.post(
-  '/session_items/' + session_item_id,
-  {"_method":"delete"},
-  function() {
-    $(that).parent().remove();
-  }
-); -->
-
-
-<!-- steps:
-			1. 'random caption' make random caption button
-				- seperate button from before
-				- adds random caption to html on page
-			2. 'save'
-				- adds caption/random caption to db
-			3. 'share'
-				- saves photo
-				- goes to diff page
-				- has form for email addresses (can add/subtract input boxes)
-				- upon submission of form, sends emails & redirects to user profile
-
-			EXTRA FUN:
-			4. 'make your own caption' add text box to type into
-			5. 'preview' add click listener to button
-				- adds caption to html on page
-				-->
+<% else %>
+	<h1>Sorry, you can't see this page :(</h1>
+<% end %>

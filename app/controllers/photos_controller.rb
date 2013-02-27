@@ -30,12 +30,6 @@ class PhotosController < ApplicationController
 		send_data(file.file, type: 'image/jpg', disposition: 'inline')
 	end
 
-	def index
-	end
-
-	def edit
-	end
-
 	def update
 		photo = Photo.find(params[:id])
 		photo.caption = params[:caption]
@@ -46,6 +40,17 @@ class PhotosController < ApplicationController
 			flash[:error] = "That didn't save :( Try clicking the button again!"
 			render 'new'
 		end
+	end
+
+	def new_share_email
+		@photo = Photo.find(params[:id])
+	end
+
+	def send_share_email
+		@photo = Photo.find(params[:id])
+		PhotoMailer.share_photo(params[:photo][:email]).deliver
+
+		redirect_to current_user
 	end
 
 end

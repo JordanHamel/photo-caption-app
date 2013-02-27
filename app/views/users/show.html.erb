@@ -1,11 +1,25 @@
-<h1>Welcome to your profile, <%= current_user.name %>!</h1>
+<div id="profile-header">
+  <h1><%= @user.name %>'s photos!</h1>
 
-<%= image_tag show_profile_pic_user_url(current_user.id) %>
+<!-- 	<div id="profile-pic">
+		<%= image_tag show_profile_pic_user_url(current_user.id) %>
+	</div> -->
+</div>
 
-<%#= image_tag show_user_photos_user_url(@user.id)%>
+<hr>
 
 <% unless @photos.empty? %>
   <%= render :partial => 'photos/file', collection: @photos %>
 <% end %>
 
-<%#= @photos.count %>
+<!-- Makes photos clickable -->
+<script type="text/javascript">
+
+	$(function() {
+		$('.captioned-photo').click(function() {
+			var photo_id = $(this).data('photo-id');
+      window.location = '/photos/' + photo_id;
+		});
+  });
+
+</script>

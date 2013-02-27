@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'bcrypt-ruby'
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'actionmailer'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,6 +15,7 @@ gem 'simple_form'
 group :development, :test do
 	gem 'rspec-rails'
 	gem 'debugger'
+	gem "letter_opener"
 end
 
 

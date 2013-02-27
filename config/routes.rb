@@ -8,13 +8,14 @@ CaptionApp::Application.routes.draw do
  		member do
  			get :show_profile_pic
  			get :show_user_photos
- 			get :show
  		end
  	end
 
   resources :photos do
   	member do
   		get :show_file
+  		get :new_share_email
+  		post :send_share_email
   	end
   end
 
