@@ -7,7 +7,6 @@ class PhotosController < ApplicationController
 	end
 
 	def create
-		before_filter :authenticate_user!
 		file = params[:photo].delete(:file).read
 
 		@photo = Photo.new(params[:photo])
