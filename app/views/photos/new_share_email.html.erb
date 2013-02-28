@@ -1,8 +1,12 @@
 <h1>Share your photo!</h1>
 
-<%= simple_form_for(@photo, url: send_share_email_photo_path(@photo), method: :post) do |f| %>
+<div class="share-photo-form">
+  <%= simple_form_for(@photo, url: send_share_email_photo_path(@photo), method: :post) do |f| %>
 
-	<%= f.input :email, input_html: { value: '' } %>
-	<%= f.submit %>
+    <div class="email">
+    	<%= f.input :email, input_html: { value: '' } %>
+    </div>
+  	<%= f.submit "Share!" %>
 
-<% end %>
+  <% end %>
+</div>

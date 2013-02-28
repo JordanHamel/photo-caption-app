@@ -9,7 +9,7 @@ gem 'actionmailer'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'simple_form'
 
 group :development, :test do

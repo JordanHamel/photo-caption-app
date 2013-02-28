@@ -1,4 +1,7 @@
 <div class="navbar">
+	<div class="home-button">
+		<%= link_to "Home", root_path %>
+	</div>
 	<ul class="navbar-buttons">
 		<% if current_user.nil? %>
 			<li><%= link_to "Sign In", new_user_session_path %></li>

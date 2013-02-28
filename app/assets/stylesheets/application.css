@@ -32,6 +32,43 @@ body {
 	margin-bottom: 20px;
 }
 
+.home-button {
+	margin-top: 18px;
+	float: left;
+	margin-left: 10px;
+}
+
+.home-button a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #232B2B;
+	background-color: #DC3D24;
+	padding: 10px;
+	margin: 0px 5px 0px 5px;
+	border-radius: 5px;
+}
+
+.home-button a:hover {
+	text-decoration: none;
+	font-size: 18px;
+	color: #232B2B;
+	background-color: #e36754;
+	padding: 10px;
+	margin: 0px 5px 0px 5px;
+	border-radius: 5px;
+}
+
+.home-button a:active {
+	text-decoration: none;
+	font-size: 18px;
+	color: #232B2B;
+	background-color: #DC3D24;
+	padding: 10px;
+	margin: 0px 5px 0px 5px;
+	border-radius: 5px;
+	box-shadow: inset 0px 2px 2px #e36754;
+}
+
 .navbar-buttons a {
 	text-decoration: none;
 	font-size: 18px;
@@ -333,6 +370,23 @@ hr {
 	width: 200px;
 	color: #E3AE57;
 }
+
+.share-photo-form {
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Happy Monkey';
+	color: #E3AE57;
+}
+
+.share-photo-form .email input {
+	margin: 10px;
+	width: 250px;
+	height: 20px;
+}
+
+
 
 
 
