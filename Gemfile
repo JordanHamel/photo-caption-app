@@ -16,6 +16,7 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'debugger'
 	gem "letter_opener"
+  gem 'sqlite3'
 end
 
 
