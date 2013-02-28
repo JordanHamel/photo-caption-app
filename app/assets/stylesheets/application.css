@@ -16,6 +16,7 @@ body {
 	background-image: url("background-texture.png");
 	font-family: 'Happy Monkey';
 	margin-bottom: 30px;
+	color: #E3AE57;
 }
 
 /*BODY-WRAP*/
@@ -114,7 +115,6 @@ body {
 h1 {
 	text-align: center;
 	font-size: 60px;
-	color: #E3AE57;
 }
 
 /*PROFILE*/
@@ -328,13 +328,12 @@ hr {
 }
 
 .form-actions .button {
+	padding: 10px;
 	font-size: 18px;
-	height: 30px;
 	border-radius: 5px;
-	width: 100px;
 	background-color: #DC3D24;
 	color: #232B2B;
-	display: block;
+	display: inline-block;
 	margin: auto;
 	border: none;
 }
@@ -386,8 +385,36 @@ hr {
 	height: 20px;
 }
 
+/*FORMS*/
 
+form {
+	margin: auto;
+	text-align: center;
+}
 
+.form-inputs {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.form-inputs .input {
+	display: inline-block;
+	float: right;
+	margin: 5px;
+}
+
+.form-inputs .input label {
+	color: #E3AE57;
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+/*BOTTOM LINKS*/
+
+.bottom-links a {
+	color: #E3AE57;
+	font-size: 18px: 
+}
 
 
 
