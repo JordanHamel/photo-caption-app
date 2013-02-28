@@ -9,8 +9,8 @@
 
   	<%= f.input :user_id, as: :hidden, :input_html => { :value => current_user.id } %>
 
-    <div class="submit-button">
-    	<%= f.submit "Upload!" %>
+    <div class="form-actions">
+      <%= f.button :submit, "Upload!" %>
     </div>
 
   <% end %>
