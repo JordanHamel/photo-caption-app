@@ -1,4 +1,7 @@
 <div class="captioned-photo" data-photo-id="<%=file.id%>">
   <%= image_tag show_file_photo_url(file) %>
+  <div class="photo-caption">
+    <p><%= file.caption =></p>
+  </div>
   <p>EDIT</p>
 </div>

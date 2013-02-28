@@ -4,8 +4,15 @@
 
 <hr>
 
-<% unless @photos.empty? %>
-  <%= render :partial => 'photos/file', collection: @photos %>
+<% @photos.each do |photo| %>
+  <div class="captioned-photo" data-photo-id="<%=photo.id%>">
+    <%= image_tag show_file_photo_url(photo) %>
+    <div class="photo-caption">
+      <p><%= photo.caption %></p>
+    </div>
+    <p>EDIT</p>
+  </div>
+  <%#= render :partial => 'photos/file', collection: @photos %>
 <% end %>
 
 <!-- Makes photos clickable -->

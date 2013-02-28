@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
 
 	def show
 		@photo = Photo.find(params[:id])
-		@captions = ["caption1", "caption2", "caption3", "caption4", "caption5"]
+		@captions = CAPTIONS
 	end
 
 	def show_file
@@ -49,6 +49,13 @@ class PhotosController < ApplicationController
 	def send_share_email
 		@photo = Photo.find(params[:id])
 		PhotoMailer.share_photo(params[:photo][:email]).deliver
+
+		redirect_to current_user
+	end
+
+	def destroy
+		@photo = Photo.find(params[:id])
+		@photo.destroy
 
 		redirect_to current_user
 	end
