@@ -1,10 +1,17 @@
 <h1>Upload a photo, add a caption, and instantly share friends!</h1>
 
-<%= simple_form_for(@photo) do |f| %>
+<div class="upload-photo-form">
+  <%= simple_form_for(@photo) do |f| %>
 
-	<%= f.file_field :file %>
-	<%= f.input :user_id, as: :hidden, :input_html => { :value => current_user.id } %>
-	<br>
-	<%= f.submit "Upload!" %>
+    <div class="file-field">
+    	<%= f.file_field :file %>
+    </div>
 
-<% end %>
+  	<%= f.input :user_id, as: :hidden, :input_html => { :value => current_user.id } %>
+
+    <div class="submit-button">
+    	<%= f.submit "Upload!" %>
+    </div>
+
+  <% end %>
+</div>
