@@ -5,6 +5,7 @@ gem 'bcrypt-ruby'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'actionmailer'
+gem 'simple_form'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -13,7 +14,6 @@ group :production do
   gem 'pg'
 end
 
-gem 'simple_form'
 
 group :development, :test do
 	gem 'rspec-rails'
