@@ -6,6 +6,7 @@
   </head>
 
   <body>
-    <h1>Somebody shared a photo with you!</h1>
+    <h2><%= @sender_name %> thinks this photo will make you laugh.</h2>
+    <p>Check it out <%= link_to("here", @photo_url ) %> :)</p>
   </body>
 </html>

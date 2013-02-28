@@ -49,7 +49,7 @@ class PhotosController < ApplicationController
 
 	def send_share_email
 		@photo = Photo.find(params[:id])
-		PhotoMailer.share_photo(params[:photo][:email]).deliver
+		PhotoMailer.share_photo(params[:photo][:email], current_user.name , @photo).deliver
 
 		redirect_to current_user
 	end
