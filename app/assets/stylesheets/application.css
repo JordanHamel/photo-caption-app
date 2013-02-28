@@ -306,42 +306,6 @@ hr {
 	margin: 10px 0 0 10px;
 }
 
-/*EDIT USER*/
-
-.edit-user-wrapper {
-	width: 350px;
-	margin: auto;
-	font-family: 'Happy Monkey';
-}
-
-.edit-user-wrapper h2 {
-	color: #E3AE57;
-	text-align: center;
-	font-size: 50px;
-}
-
-.edit-user-wrapper .form-inputs label {
-	color: #E3AE57;
-	font-size: 18px;
-	padding: 4px;
-}
-
-.form-actions .button {
-	padding: 10px;
-	font-size: 18px;
-	border-radius: 5px;
-	background-color: #DC3D24;
-	color: #232B2B;
-	display: inline-block;
-	margin: auto;
-	border: none;
-}
-
-.form-actions {
-	padding: 10px;
-}
-
-
 /*UPLOAD PHOTO*/
 
 .upload-photo-form {
