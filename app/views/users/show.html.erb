@@ -4,18 +4,22 @@
 
 <hr>
 
-<% @photos.each do |photo| %>
-  <div class="captioned-photo" data-photo-id="<%=photo.id%>">
-    <%= image_tag show_file_photo_url(photo) %>
-    <div class="photo-caption">
-      <p><%= photo.caption %></p>
+<% if @photos.empty? && @user.id == current_user.id %>
+  <h3>You don't have any photos yet :( Use the button up top to fill our your profile!</h3>
+<% elsif @photos.empty? && @user.id != current_user.id %>
+  <h3><%= @user.name %> doesn't seem to have any photos yet :(</h3>
+<% else %>
+  <% @photos.each do |photo| %>
+    <div class="captioned-photo" data-photo-id="<%=photo.id%>">
+      <%= image_tag show_file_photo_url(photo) %>
+      <div class="photo-caption">
+        <p><%= photo.caption %></p>
+      </div>
     </div>
-    <!-- <p>EDIT</p> -->
-  </div>
-  <hr>
-  <br>
-  <%#= render :partial => 'photos/file', collection: @photos %>
-<% end %>
+    <hr>
+    <br>
+  <% end %>
+<% end  %>
 
 <!-- Makes photos clickable -->
 <script type="text/javascript">
