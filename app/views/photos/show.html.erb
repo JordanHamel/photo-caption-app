@@ -4,9 +4,10 @@
 
 	<div class="photo-to-edit">
 		<%= image_tag show_file_photo_url(@photo.id)%>
-		<div class="photo-caption">
-			<p><%=@photo.caption%></p>
-		</div>
+	</div>
+	
+	<div class="photo-caption">
+		<p><%=@photo.caption%></p>
 	</div>
 
 	<div class="caption-share-buttons">
@@ -42,11 +43,6 @@
 	 				}
 	 			);
 	 		});
-
-			$('.photo-to-edit').find('img').each(function() {
-			  var imgClass = (this.width/this.height > 1) ? 'wide' : 'tall';
-			  $(this).addClass(imgClass);
-			});
 	 	});
 
 	</script>
