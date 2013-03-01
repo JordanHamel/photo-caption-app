@@ -1,25 +1,20 @@
 <%#= stylesheet_link_tag "modern.css" %>
 <%#= javascript_include_tag "carousel.js" %>
 
-<h1>Welcome!</h1>
+<h1>Welcome!</h1><br>
 
 <% if current_user %>
 
-  <div class="carousel" data-role="carousel">
+  <div class="carousel" data-role="carousel" data-param-period="4000">
     <div class="slides">
-        <div class="slide image" id="slide1">
-            <%= image_tag "kitten.jpg" %>
+      <% @photos.each do |photo| %>
+        <div class="slide image">
+            <%= image_tag show_file_photo_path(photo) %>
             <div class="description">
-                <%= @photos[0].caption %>
+                <%= photo.caption %>
             </div>
         </div>
-
-        <div class="slide mixed" id="slide2">
-            <%= image_tag "headshot.jpg" %>
-            <div class="description">
-                <%= @photos[1].caption %>
-            </div>
-        </div>
+      <% end %>
     </div>
 
     <span class="control left">‹</span>

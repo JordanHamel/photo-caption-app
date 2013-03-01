@@ -426,6 +426,11 @@ iframe {
   height: 500px;
 }
 
+.slides img {
+	width: 100%;
+	overflow: hidden;
+}
+
 
 
 
