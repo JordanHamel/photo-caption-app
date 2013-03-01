@@ -1,10 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	def home
-
-    #query for most recent photos
-    #in css, make sure photos don't stretch
-    @photos = Photo.limit(10)
+    @photos = Photo.select("photos.*").order("updated_at DESC").limit(5)
 	end
 
 end
