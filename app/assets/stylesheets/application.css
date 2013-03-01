@@ -14,7 +14,6 @@
 
 body {
 	background-image: url("background-texture.png");
-	font-family: 'Happy Monkey';
 	margin-bottom: 30px;
 	color: #E3AE57;
 }
@@ -146,12 +145,11 @@ h1 {
 }
 
 .captioned-photo .photo-caption p {
-	width: 700px;
-	height: 70px;
+	display: inline-block;
+	line-height: 140%;
 	color: #FFFFFF;
 	font-size: 50px;
 	font-weight: bold;
-	text-align: center;
 	text-align: center;
 	text-shadow: 3px 3px 2px black;
 }
@@ -414,6 +412,19 @@ iframe {
   margin: auto;
 }
 
+/*CAROUSEL*/
+
+.carousel {
+	display: inline-block;
+	margin: auto;
+	width: 700px;
+  height: 500px;
+}
+
+.slides {
+	width: 700px;
+  height: 500px;
+}
 
 
 

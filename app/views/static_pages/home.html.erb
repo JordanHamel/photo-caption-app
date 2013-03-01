@@ -1,38 +1,30 @@
+<%#= stylesheet_link_tag "modern.css" %>
+<%#= javascript_include_tag "carousel.js" %>
+
 <h1>Welcome!</h1>
 
 <% if current_user %>
-  <!-- carousel -->
 
-  <div id="photo-list-div">
-    <ul id="photo-list-ul">
-      <% @photos.each do |photo| %>
-        <li class="list-item">
-          <div class="photo">
-            <%= photo.caption %>
-          </div>
-        </li>
-      <% end %>
-    </ul>
+  <div class="carousel" data-role="carousel">
+    <div class="slides">
+        <div class="slide image" id="slide1">
+            <%= image_tag "kitten.jpg" %>
+            <div class="description">
+                <%= @photos[0].caption %>
+            </div>
+        </div>
+
+        <div class="slide mixed" id="slide2">
+            <%= image_tag "headshot.jpg" %>
+            <div class="description">
+                <%= @photos[1].caption %>
+            </div>
+        </div>
+    </div>
+
+    <span class="control left">‹</span>
+    <span class="control right">›</span>
   </div>
-
-<script type="text/javascript">
-  $(function () {
-    var next = function() {
-      // if (parseInt($('#photo-list-ul').css("left")) <= -2800) {
-        // $('#item-list-ul').css("left", 700);
-      // }
-      $('#item-list-ul').animate({ left: '-=700'});
-      timer();;
-    };
-
-    function timer() {
-      setTimeout(next, 3000);
-    };
-
-    timer();
-  });
-</script>
-
 
 <% else %>
   <h2 class="front-page-text">
