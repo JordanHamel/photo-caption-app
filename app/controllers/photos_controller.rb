@@ -16,7 +16,7 @@ class PhotosController < ApplicationController
 			flash[:success] = "Your photo has been successfully uploaded!"
 			redirect_to @photo
 		else
-			flash[:error] = "Well, that didn't work! Care to try again?"
+			flash[:error] = "Well, that didn't work! Care to try again? (Your file might be too big)"
 			render 'new'
 		end
 	end
@@ -27,8 +27,8 @@ class PhotosController < ApplicationController
 	end
 
 	def show_file
-		file = Photo.find(params[:id])
-		send_data(file.file, type: 'image/jpg', disposition: 'inline')
+		photo = Photo.find(params[:id])
+		send_data(photo.file, type: 'image/jpg', disposition: 'inline')
 	end
 
 	def update

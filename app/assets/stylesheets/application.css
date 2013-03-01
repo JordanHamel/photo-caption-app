@@ -30,6 +30,12 @@ h3 {
 	margin: auto;
 }
 
+h1 {
+	color: #E3AE57;
+	text-align: center;
+	font-size: 60px;
+}
+
 /*NAVBAR*/
 
 .navbar {
@@ -114,11 +120,6 @@ h3 {
 	margin-top: 18px;
 	float: right;
 	margin-right: 10px;
-}
-
-h1 {
-	text-align: center;
-	font-size: 60px;
 }
 
 /*PROFILE*/
@@ -379,7 +380,6 @@ form {
 	color: #E3AE57;
 	font-size: 18px
 }
-
 
 
 

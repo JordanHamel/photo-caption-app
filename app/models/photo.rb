@@ -2,7 +2,12 @@ class Photo < ActiveRecord::Base
   attr_accessible :caption, :file, :user_id
 
   validates :user_id, presence: true
-  # validates :file, presence: true, file_size: { maximum: 2.0.megabytes.to_i }
+
+  validate :file_size_validation, :if => "file?"  
+
+  def file_size_validation
+    errors[:file] << "should be less than 1MB" if file.size > 1.megabytes
+  end
 
   belongs_to :user
 end

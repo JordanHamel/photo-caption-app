@@ -51,6 +51,8 @@
 
 	<% else %>
 
+		<h1><%= link_to("#{@photo.user.name}", user_path(@photo.user_id)) %>'s Photo</h1>
+
 		<div class="photo-to-edit">
 			<%= image_tag show_file_photo_url(@photo.id)%>
 		</div>
