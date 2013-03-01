@@ -1,1 +1,44 @@
 <h1>Welcome!</h1>
+
+<% if current_user %>
+  <!-- carousel -->
+
+  <div id="photo-list-div">
+    <ul id="photo-list-ul">
+      <% @photos.each do |photo| %>
+        <li class="list-item">
+          <div class="photo">
+            <%= photo.caption %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+<script type="text/javascript">
+  $(function () {
+    var next = function() {
+      // if (parseInt($('#photo-list-ul').css("left")) <= -2800) {
+        // $('#item-list-ul').css("left", 700);
+      // }
+      $('#item-list-ul').animate({ left: '-=700'});
+      timer();;
+    };
+
+    function timer() {
+      setTimeout(next, 3000);
+    };
+
+    timer();
+  });
+</script>
+
+
+<% else %>
+  <h2 class="front-page-text">
+    Have you ever taken the perfect picture, but not been able to come up
+    with a great caption for it? If so, then this site is for you! Our
+    highly advanced randomizing technology will help you find the perfect
+    caption for your picture. Sign up today!
+  </h2>
+<% end %>

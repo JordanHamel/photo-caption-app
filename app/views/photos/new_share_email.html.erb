@@ -1,13 +1,20 @@
-<h1>Share your photo!</h1>
+<h1>Email your photo!</h1>
 
 <div class="share-photo-form">
   <%= simple_form_for(@photo, url: send_share_email_photo_path(@photo), method: :post) do |f| %>
-    <div class="email">
+    <div class="form-inputs">
     	<%= f.input :email, input_html: { value: '' } %>
     </div>
-  	<%= f.submit "Share!" %>
+    <div class="form-actions">
+    	<%= f.submit "Share!" %>
+    </div>
   <% end %>
 </div>
+
+<br>
+<hr>
+
+<h1>Tweet your photo!</h1>
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-size="large"data-lang="en" data-text="<%= @photo.caption %>" data-url="http://limitless-river-8895.herokuapp.com/photos/<%=@photo.id%>">Tweet!</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

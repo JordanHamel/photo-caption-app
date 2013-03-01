@@ -1,8 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	def home
-    #not using this right now
-    #@photos = Photo.limit(10)
+    @photos = Photo.limit(5)
 	end
 
 end

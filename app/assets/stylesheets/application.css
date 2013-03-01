@@ -333,12 +333,6 @@ hr {
 	color: #E3AE57;
 }
 
-.share-photo-form .email input {
-	margin: 10px;
-	width: 250px;
-	height: 20px;
-}
-
 /*FORMS*/
 
 form {
@@ -366,7 +360,6 @@ form {
 .form-actions input {
 	font-size: 18px;
 	font-family: 'Happy Monkey';
-	color:;
 	background-color: #DC3D24;
 	padding: 15px;
 	border-radius: 10px;
@@ -379,6 +372,46 @@ form {
 .bottom-links a {
 	color: #E3AE57;
 	font-size: 18px
+}
+
+/*TWEET BUTTON*/
+
+iframe {
+	margin-top: 20px;
+	margin-left: 390px;
+}
+
+/*FRONT PAGE*/
+
+.front-page-text {
+	text-align: center;
+	line-height: 130%;
+}
+
+#photo-list-div {
+  width: 700px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+#photo-list-ul {
+  width: 3500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.list-item {
+  width: 700px;
+  float: left;
+  list-style-type: none;
+}
+
+.photo {
+  max-width: 700px;
+  margin: auto;
 }
 
 
