@@ -6,6 +6,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'actionmailer'
 gem 'simple_form'
+gem 'kaminari'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

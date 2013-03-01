@@ -55,7 +55,6 @@ h1 {
 	background-color: #DC3D24;
 	padding: 10px;
 	margin: 0px 5px 0px 5px;
-	border-radius: 5px;
 }
 
 .home-button a:hover {
@@ -65,7 +64,6 @@ h1 {
 	background-color: #e36754;
 	padding: 10px;
 	margin: 0px 5px 0px 5px;
-	border-radius: 5px;
 }
 
 .home-button a:active {
@@ -75,7 +73,6 @@ h1 {
 	background-color: #DC3D24;
 	padding: 10px;
 	margin: 0px 5px 0px 5px;
-	border-radius: 5px;
 	box-shadow: inset 0px 2px 2px #e36754;
 }
 
@@ -86,7 +83,6 @@ h1 {
 	background-color: #DC3D24;
 	padding: 10px;
 	margin: 0px 5px 0px 5px;
-	border-radius: 5px;
 }
 
 .navbar-buttons a:hover {
@@ -96,7 +92,6 @@ h1 {
 	background-color: #e36754;
 	padding: 10px;
 	margin: 0px 5px 0px 5px;
-	border-radius: 5px;
 }
 
 .navbar-buttons a:active {
@@ -106,7 +101,6 @@ h1 {
 	background-color: #DC3D24;
 	padding: 10px;
 	margin: 0px 5px 0px 5px;
-	border-radius: 5px;
 	box-shadow: inset 0px 2px 2px #e36754;
 }
 
@@ -144,13 +138,16 @@ h1 {
 	opacity: .5;
 }
 
+.captioned-photo .photo-caption {
+	text-align: center;
+}
+
 .captioned-photo .photo-caption p {
 	display: inline-block;
 	line-height: 140%;
 	color: #FFFFFF;
 	font-size: 50px;
 	font-weight: bold;
-	text-align: center;
 	text-shadow: 3px 3px 2px black;
 }
 
@@ -171,6 +168,7 @@ hr {
 }
 
 .photo-caption p {
+	line-height: 140%;
 	padding: 20px;
   color: #FFFFFF;
   font-size: 50px;
@@ -190,7 +188,6 @@ hr {
 	cursor: pointer;
 	width: 150px;
 	height: 60px;
-	border-radius: 5px;
 	background-color: #DC3D24;
 	margin-right: 20px;
 	float: right;
@@ -203,7 +200,6 @@ hr {
 	cursor: pointer;
 	width: 150px;
 	height: 60px;
-	border-radius: 5px;
 	background-color: #e36754;
 	margin-right: 20px;
 	float: right;
@@ -216,7 +212,6 @@ hr {
 	cursor: pointer;
 	width: 150px;
 	height: 60px;
-	border-radius: 5px;
 	background-color: #DC3D24;
 	margin-right: 20px;
 	float: right;
@@ -225,20 +220,17 @@ hr {
 }
 
 .share-button a {
-	top: 30%;
-	left: 30%;
 	position: absolute;
 	text-decoration: none;
 	font-size: 18px;
 	color: #232B2B;
+	padding: 20px 20px 20px 47px;
 }
 
 .random-caption-button {
 	cursor: hand;
 	cursor: pointer;
-	font-family: 'Happy Monkey';
 	font-size: 18px;
-	border-radius: 5px;
 	width: 150px;
 	height: 60px;
 	background-color: #DC3D24;
@@ -249,9 +241,7 @@ hr {
 .random-caption-button:hover {
 	cursor: hand;
 	cursor: pointer;
-	font-family: 'Happy Monkey';
 	font-size: 18px;
-	border-radius: 5px;
 	width: 150px;
 	height: 60px;
 	background-color: #e36754;
@@ -262,9 +252,7 @@ hr {
 .random-caption-button:active {
 	cursor: hand;
 	cursor: pointer;
-	font-family: 'Happy Monkey';
 	font-size: 18px;
-	border-radius: 5px;
 	width: 150px;
 	height: 60px;
 	background-color: #DC3D24;
@@ -280,7 +268,6 @@ hr {
 	width: 60px;
 	background-color: #DC3D24;
 	border: 0px;
-	border-radius: 5px;
 	margin-left: 20px;
 }
 
@@ -290,7 +277,6 @@ hr {
 	width: 60px;
 	background-color: #e36754;
 	border: 0px;
-	border-radius: 5px;
 	margin-left: 20px;
 }
 
@@ -300,7 +286,6 @@ hr {
 	width: 60px;
 	background-color: #DC3D24;
 	border: 0px;
-	border-radius: 5px;
 	margin-left: 20px;
 	box-shadow: inset 0px 2px 2px #e36754;
 }
@@ -327,7 +312,6 @@ hr {
 	margin: auto;
 	text-align: center;
 	font-size: 18px;
-	font-family: 'Happy Monkey';
 	color: #E3AE57;
 }
 
@@ -357,10 +341,8 @@ form {
 
 .form-actions input {
 	font-size: 18px;
-	font-family: 'Happy Monkey';
 	background-color: #DC3D24;
 	padding: 15px;
-	border-radius: 10px;
 	border: none;
 	margin: 10px;
 }

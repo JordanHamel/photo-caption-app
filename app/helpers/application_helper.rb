@@ -7,7 +7,7 @@ module ApplicationHelper
               "Who do you think you are?",
               "Friends for life.",
               "Never met a mirror that I didn't like.",
-              "Don't worry, I can handle this.".
+              "Don't worry, I can handle this.",
               "I don't get most jokes, but I laugh anyways.",
               "#WINNING",
               "Don't worry, I know what I'm doing.",
