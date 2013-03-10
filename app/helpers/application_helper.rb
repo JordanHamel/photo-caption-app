@@ -14,5 +14,13 @@ module ApplicationHelper
               "Only you know what is on my mind.",
               "I'm your brother.",
               "All the single ladies",
-              "Hey I just met you, and this is crazy..."]
+              "Hey I just met you, and this is crazy...",
+              "It's hard being this beautiful.",
+              "Reall ridiculously good looking.",
+              "Does this make my butt look big?",
+              "Life is short.  Eat dessert before dinner.",
+              "This is how my last hospital visit began...",
+              "I prefer large posteriors and I cannot fib.",
+              "I'm not a hipster.",
+              "My diet starts tomorrow."]
 end
