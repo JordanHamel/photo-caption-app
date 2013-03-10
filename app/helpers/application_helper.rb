@@ -16,7 +16,7 @@ module ApplicationHelper
               "All the single ladies",
               "Hey I just met you, and this is crazy...",
               "It's hard being this beautiful.",
-              "Reall ridiculously good looking.",
+              "Realy ridiculously good looking.",
               "Does this make my butt look big?",
               "Life is short.  Eat dessert before dinner.",
               "This is how my last hospital visit began...",
