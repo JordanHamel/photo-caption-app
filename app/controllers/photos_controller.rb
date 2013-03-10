@@ -1,6 +1,5 @@
 class PhotosController < ApplicationController
-	before_filter :authenticate_user!, except: [:show]
-
+	before_filter :authenticate_user!, except: [:show, :show_file]
 
 	def new
 		@photo = Photo.new
